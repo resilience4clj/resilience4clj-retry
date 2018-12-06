@@ -1,0 +1,18 @@
+{:paths ["src"]
+ 
+ :deps
+ {org.clojure/clojure                       {:mvn/version "1.9.0"}
+  io.github.resilience4j/resilience4j-retry {:mvn/version "0.13.2"}}
+
+ :aliases
+ {:dev
+  {:extra-paths ["dev"]
+   :extra-deps
+   {org.clojure/tools.namespace      {:mvn/version "0.2.11"}
+    org.clojure/tools.nrepl          {:mvn/version "0.2.13"}}}
+
+  :test
+  {:extra-paths ["test"]
+   :extra-deps
+   {lambdaisland/kaocha {:mvn/version "0.0-266"}}
+   :main-opts ["-m" "kaocha.runner"]}}}
