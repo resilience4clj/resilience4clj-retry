@@ -32,7 +32,7 @@ in several different ways.
 ## Table of Contents
 
 * [Getting Started](#getting-started)
-* [Retry Settings](#limiter-settings)
+* [Retry Settings](#retry-settings)
 * [Fallback Strategies](#fallback-strategies)
 * [Metrics](#metrics)
 * [Events](#events)
@@ -103,7 +103,7 @@ two times you call it before starting to work normally.
 By default, `r/create` will create a retry that has a max of 3
 attempts and a waiting period of 500ms between calls. You can now
 create a decorated version of your `hello-world` function above and
-the `retry` above like this:
+combine it with the `retry` we created before like this:
 
 ``` clojure
 (def protected (r/decorate hello-world retry))
