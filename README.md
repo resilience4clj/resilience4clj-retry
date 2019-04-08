@@ -294,7 +294,7 @@ of your retries.
 ``` clojure
 (def my-retry (r/create "my-retry"))
 
-(cb/listen-event my-retry
+(r/listen-event my-retry
                  :RETRY
                  (fn [evt]
                    (println (str "Received event " (:event-type evt)))))
