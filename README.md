@@ -304,8 +304,8 @@ There are four types of events:
 
 1. `:SUCCESS` - informs that a call has been tried and succeeded
 2. `:ERROR` - informs that a call has been retried, but still failed
-5. `:IGNORED_ERROR` - informs that an error has been ignored
-6. `:RETRY` - informs that a call has been tried, failed and will now
+3. `:IGNORED_ERROR` - informs that an error has been ignored
+4. `:RETRY` - informs that a call has been tried, failed and will now
    be retried
 
 Notice you have to listen to a particular type of event by specifying
