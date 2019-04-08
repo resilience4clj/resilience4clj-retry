@@ -195,7 +195,7 @@ that the retry and/or that the external dependency failed. Example:
   (str "Hello " person))
 
 (def retry-hello
-  (r/decorate hello
+  (r/decorate hello retry
               {:fallback (fn [e person]
                            (str "Hello from fallback to " person))}))
 ```
@@ -252,7 +252,7 @@ Resilience4clj retry supports this behavior in the folling way:
   (str "Hello " person))
 
 (def retry-hello
-  (r/decorate hello
+  (r/decorate hello retry
               {:effect (fn [ret person]
                          ;; ret will have the successful return from `hello`
                          ;; you can save it on a memory cache, disk, etc
